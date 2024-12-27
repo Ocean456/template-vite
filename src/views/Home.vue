@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {ref} from "vue";
+import router from "@/router";
 
 const home = ref('home');
 </script>
@@ -7,7 +8,7 @@ const home = ref('home');
 <template>
     <div id="home">
       {{home}}
-      <el-button>默认按钮</el-button>
+      <el-button @click="router.push('/user')">默认按钮</el-button>
     </div>
 </template>
 
